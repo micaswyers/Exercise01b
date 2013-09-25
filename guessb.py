@@ -24,7 +24,9 @@ while guessed != random:
             tries += 1
         else:
             print "Well done, %s! You found my number in %d tries!" % (name, tries)
+        if tries > 10:
+            print "You're terrible at this. You ran out of tries :("
+            exit(0)
 
-    
     except ValueError:
         print "Give me a real number!"
